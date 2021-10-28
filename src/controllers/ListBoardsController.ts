@@ -1,8 +1,8 @@
-import { Request, Response } from "express";
+import { Response } from "express";
 import { ListBoardsService } from "../services/ListBoardsService";
 
 class ListBoardsController {
-  async handle(request: Request, response: Response) {
+  async handle(response: Response) {
     const service = new ListBoardsService();
     try {
       const result = await service.execute();
