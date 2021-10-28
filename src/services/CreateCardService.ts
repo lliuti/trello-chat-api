@@ -3,7 +3,7 @@ import { ICard } from "../dtos/ICard";
 import { IPostResponse } from "../dtos/IPostResponse";
 
 class CreateCardService {
-  async execute({ name, desc, pos, idList }: ICard) {
+  async execute({ name, desc, pos, idList }: ICard): Promise<IPostResponse> {
     const response = await axios.post(
       `https://api.trello.com/1/cards?key=${process.env.TRELLO_API_KEY}&token=${process.env.TRELLO_TOKEN}&idList=${idList}&name=${name}&desc=${desc}&pos=${pos}`,
       {
