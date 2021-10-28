@@ -1,11 +1,5 @@
 import axios from "axios";
-
-interface IListsResponse {
-  id: string;
-  name: string;
-  closed: boolean;
-  idBoard: string;
-}
+import { IListsResponse } from "../dtos/IListsResponse";
 
 class GetListsService {
   async execute(boardId: string) {
