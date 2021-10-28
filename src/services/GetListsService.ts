@@ -2,8 +2,8 @@ import axios from "axios";
 import { IListsResponse } from "../dtos/IListsResponse";
 
 class GetListsService {
-  async execute(boardId: string) {
-    const url = `https://api.trello.com/1/boards/${boardId}/lists?key=${process.env.TRELLO_API_KEY}&token=${process.env.TRELLO_TOKEN}`;
+  async execute(board: string): Promise<IListsResponse[]> {
+    const url = `https://api.trello.com/1/boards/${board}/lists?key=${process.env.TRELLO_API_KEY}&token=${process.env.TRELLO_TOKEN}`;
     const response = await axios.get<IListsResponse[]>(url);
 
     const data = response.data as IListsResponse[];
