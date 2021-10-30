@@ -29,12 +29,6 @@ npm install
 npm run dev
 ```
 
-<br>
-
----
-
-<br>
-
 ## ⚠ - Client
 
 To visualize this API running (and properly test it), checkout the frontend application [here](https://github.com/lliuti/trello-chat-web)
